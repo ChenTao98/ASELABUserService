@@ -1,0 +1,24 @@
+server:
+  port: 21001
+spring:
+  jpa:
+    database: h2
+    open-in-view: false
+  datasource:
+    url: jdbc:h2:mem:user_db
+    driver-class-name: org.h2.Driver
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+  application:
+    name: user-service
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://fduse:Fudanse2019@106.14.16.245:8911/eureka/
+    register-with-eureka: true
+    fetch-registry: true
